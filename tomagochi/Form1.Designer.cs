@@ -29,6 +29,7 @@ namespace tomagochi
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pbImage = new System.Windows.Forms.PictureBox();
             this.pbEat = new System.Windows.Forms.PictureBox();
@@ -51,6 +52,7 @@ namespace tomagochi
             this.lblXpCur = new System.Windows.Forms.Label();
             this.lblXpMax = new System.Windows.Forms.Label();
             this.lblGameOver = new System.Windows.Forms.Label();
+            this.GameTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSleep)).BeginInit();
@@ -63,11 +65,12 @@ namespace tomagochi
             // 
             this.pbImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbImage.BackgroundImage")));
             this.pbImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbImage.Location = new System.Drawing.Point(107, 124);
+            this.pbImage.Location = new System.Drawing.Point(107, 97);
             this.pbImage.Name = "pbImage";
             this.pbImage.Size = new System.Drawing.Size(275, 262);
             this.pbImage.TabIndex = 0;
             this.pbImage.TabStop = false;
+            this.pbImage.Click += new System.EventHandler(this.pbImage_Click);
             // 
             // pbEat
             // 
@@ -130,6 +133,7 @@ namespace tomagochi
             this.btnEat.TabIndex = 2;
             this.btnEat.Text = " ";
             this.btnEat.UseVisualStyleBackColor = true;
+            this.btnEat.Click += new System.EventHandler(this.btnEat_Click);
             // 
             // btnHappy
             // 
@@ -141,6 +145,7 @@ namespace tomagochi
             this.btnHappy.TabIndex = 2;
             this.btnHappy.Text = " ";
             this.btnHappy.UseVisualStyleBackColor = true;
+            this.btnHappy.Click += new System.EventHandler(this.btnHappy_Click);
             // 
             // btnClear
             // 
@@ -152,6 +157,7 @@ namespace tomagochi
             this.btnClear.TabIndex = 2;
             this.btnClear.Text = " ";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSleep
             // 
@@ -179,9 +185,8 @@ namespace tomagochi
             this.lblEatMax.AutoSize = true;
             this.lblEatMax.Location = new System.Drawing.Point(173, 68);
             this.lblEatMax.Name = "lblEatMax";
-            this.lblEatMax.Size = new System.Drawing.Size(9, 13);
+            this.lblEatMax.Size = new System.Drawing.Size(0, 13);
             this.lblEatMax.TabIndex = 4;
-            this.lblEatMax.Text = "l";
             // 
             // lblSleepCur
             // 
@@ -258,16 +263,22 @@ namespace tomagochi
             // lblGameOver
             // 
             this.lblGameOver.AutoSize = true;
-            this.lblGameOver.Location = new System.Drawing.Point(127, 369);
+            this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGameOver.Location = new System.Drawing.Point(169, 389);
             this.lblGameOver.Name = "lblGameOver";
-            this.lblGameOver.Size = new System.Drawing.Size(0, 13);
+            this.lblGameOver.Size = new System.Drawing.Size(411, 42);
             this.lblGameOver.TabIndex = 5;
+            this.lblGameOver.Text = "Он умер , это ужасно:(";
+            // 
+            // GameTimer
+            // 
+            this.GameTimer.Tick += new System.EventHandler(this.GameTimer_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(708, 450);
             this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.lblXpMax);
             this.Controls.Add(this.lblXpCur);
@@ -326,6 +337,7 @@ namespace tomagochi
         private System.Windows.Forms.Label lblXpCur;
         private System.Windows.Forms.Label lblXpMax;
         private System.Windows.Forms.Label lblGameOver;
+        private System.Windows.Forms.Timer GameTimer;
     }
 }
 

@@ -44,7 +44,7 @@ namespace tomagochi
                 current_value = 0;
 
             }
-            return this ;
+            return this;
         }
     }
 }
