@@ -132,25 +132,25 @@ namespace tomagochi
         }
         public void dec_clear()
         {
-            Settings.clear.sub_value(Settings.sub);
+            Settings.clear.sub_value(Settings.default_sub );
             set_scales();
             Settings.is_gameover = is_die();
         }
         public void dec_happy()
         {
-            Settings.happy.sub_value(Settings.sub);
+            Settings.happy.sub_value(Settings.default_sub );
             set_scales();
             Settings.is_gameover = is_die();
         }
         public void dec_sleep()
         {
-            Settings.sleep.sub_value(Settings.sub);
+            Settings.sleep.sub_value(Settings.default_sub);
             set_scales();
             Settings.is_gameover = is_die();
         }
         public void dec_eat()
         {
-            Settings.eat.sub_value(Settings.sub);
+            Settings.eat.sub_value(Settings.default_sub );
             set_scales();
             Settings.is_gameover = is_die();
         }

@@ -53,19 +53,33 @@ namespace tomagochi
             this.lblXpMax = new System.Windows.Forms.Label();
             this.lblGameOver = new System.Windows.Forms.Label();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
+            this.pbQ1 = new System.Windows.Forms.PictureBox();
+            this.pbQ2 = new System.Windows.Forms.PictureBox();
+            this.pbQ3 = new System.Windows.Forms.PictureBox();
+            this.pbQ4 = new System.Windows.Forms.PictureBox();
+            this.pbQ5 = new System.Windows.Forms.PictureBox();
+            this.pbQ6 = new System.Windows.Forms.PictureBox();
+            this.btnAction = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSleep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHappy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbXp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQ1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQ2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQ3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQ4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQ5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQ6)).BeginInit();
             this.SuspendLayout();
             // 
             // pbImage
             // 
             this.pbImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbImage.BackgroundImage")));
             this.pbImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbImage.Location = new System.Drawing.Point(107, 97);
+            this.pbImage.Location = new System.Drawing.Point(107, 124);
             this.pbImage.Name = "pbImage";
             this.pbImage.Size = new System.Drawing.Size(275, 262);
             this.pbImage.TabIndex = 0;
@@ -274,11 +288,86 @@ namespace tomagochi
             // 
             this.GameTimer.Tick += new System.EventHandler(this.GameTimer_Tick);
             // 
+            // pbQ1
+            // 
+            this.pbQ1.Location = new System.Drawing.Point(657, 56);
+            this.pbQ1.Name = "pbQ1";
+            this.pbQ1.Size = new System.Drawing.Size(46, 41);
+            this.pbQ1.TabIndex = 6;
+            this.pbQ1.TabStop = false;
+            // 
+            // pbQ2
+            // 
+            this.pbQ2.Location = new System.Drawing.Point(657, 114);
+            this.pbQ2.Name = "pbQ2";
+            this.pbQ2.Size = new System.Drawing.Size(46, 41);
+            this.pbQ2.TabIndex = 6;
+            this.pbQ2.TabStop = false;
+            // 
+            // pbQ3
+            // 
+            this.pbQ3.Location = new System.Drawing.Point(657, 172);
+            this.pbQ3.Name = "pbQ3";
+            this.pbQ3.Size = new System.Drawing.Size(46, 41);
+            this.pbQ3.TabIndex = 6;
+            this.pbQ3.TabStop = false;
+            // 
+            // pbQ4
+            // 
+            this.pbQ4.Location = new System.Drawing.Point(657, 231);
+            this.pbQ4.Name = "pbQ4";
+            this.pbQ4.Size = new System.Drawing.Size(46, 41);
+            this.pbQ4.TabIndex = 6;
+            this.pbQ4.TabStop = false;
+            // 
+            // pbQ5
+            // 
+            this.pbQ5.Location = new System.Drawing.Point(657, 289);
+            this.pbQ5.Name = "pbQ5";
+            this.pbQ5.Size = new System.Drawing.Size(46, 41);
+            this.pbQ5.TabIndex = 6;
+            this.pbQ5.TabStop = false;
+            // 
+            // pbQ6
+            // 
+            this.pbQ6.Location = new System.Drawing.Point(657, 345);
+            this.pbQ6.Name = "pbQ6";
+            this.pbQ6.Size = new System.Drawing.Size(46, 41);
+            this.pbQ6.TabIndex = 6;
+            this.pbQ6.TabStop = false;
+            // 
+            // btnAction
+            // 
+            this.btnAction.Location = new System.Drawing.Point(640, 392);
+            this.btnAction.Name = "btnAction";
+            this.btnAction.Size = new System.Drawing.Size(80, 38);
+            this.btnAction.TabIndex = 7;
+            this.btnAction.Text = "Сделать";
+            this.btnAction.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(632, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Очередь";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 450);
+            this.ClientSize = new System.Drawing.Size(732, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAction);
+            this.Controls.Add(this.pbQ6);
+            this.Controls.Add(this.pbQ5);
+            this.Controls.Add(this.pbQ4);
+            this.Controls.Add(this.pbQ3);
+            this.Controls.Add(this.pbQ2);
+            this.Controls.Add(this.pbQ1);
             this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.lblXpMax);
             this.Controls.Add(this.lblXpCur);
@@ -309,6 +398,12 @@ namespace tomagochi
             ((System.ComponentModel.ISupportInitialize)(this.pbHappy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbXp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQ1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQ2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQ3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQ4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQ5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQ6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,6 +433,14 @@ namespace tomagochi
         private System.Windows.Forms.Label lblXpMax;
         private System.Windows.Forms.Label lblGameOver;
         private System.Windows.Forms.Timer GameTimer;
+        private System.Windows.Forms.PictureBox pbQ1;
+        private System.Windows.Forms.PictureBox pbQ2;
+        private System.Windows.Forms.PictureBox pbQ3;
+        private System.Windows.Forms.PictureBox pbQ4;
+        private System.Windows.Forms.PictureBox pbQ5;
+        private System.Windows.Forms.PictureBox pbQ6;
+        private System.Windows.Forms.Button btnAction;
+        private System.Windows.Forms.Label label1;
     }
 }
 
