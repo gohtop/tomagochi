@@ -62,6 +62,14 @@ namespace tomagochi
             this.btnAction = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.QTimer = new System.Windows.Forms.Timer(this.components);
+            this.pbStack1 = new System.Windows.Forms.PictureBox();
+            this.pbStack2 = new System.Windows.Forms.PictureBox();
+            this.pbStack3 = new System.Windows.Forms.PictureBox();
+            this.pbStack4 = new System.Windows.Forms.PictureBox();
+            this.pbStack5 = new System.Windows.Forms.PictureBox();
+            this.pbStack6 = new System.Windows.Forms.PictureBox();
+            this.btnStack = new System.Windows.Forms.Button();
+            this.STACK = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSleep)).BeginInit();
@@ -74,6 +82,12 @@ namespace tomagochi
             ((System.ComponentModel.ISupportInitialize)(this.pbQ4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQ5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQ6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStack1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStack2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStack3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStack4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStack5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStack6)).BeginInit();
             this.SuspendLayout();
             // 
             // pbImage
@@ -367,18 +381,100 @@ namespace tomagochi
             // 
             this.QTimer.Tick += new System.EventHandler(this.QTimer_Tick);
             // 
+            // pbStack1
+            // 
+            this.pbStack1.Location = new System.Drawing.Point(755, 56);
+            this.pbStack1.Name = "pbStack1";
+            this.pbStack1.Size = new System.Drawing.Size(46, 41);
+            this.pbStack1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbStack1.TabIndex = 6;
+            this.pbStack1.TabStop = false;
+            // 
+            // pbStack2
+            // 
+            this.pbStack2.Location = new System.Drawing.Point(755, 114);
+            this.pbStack2.Name = "pbStack2";
+            this.pbStack2.Size = new System.Drawing.Size(46, 41);
+            this.pbStack2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbStack2.TabIndex = 6;
+            this.pbStack2.TabStop = false;
+            // 
+            // pbStack3
+            // 
+            this.pbStack3.Location = new System.Drawing.Point(755, 172);
+            this.pbStack3.Name = "pbStack3";
+            this.pbStack3.Size = new System.Drawing.Size(46, 41);
+            this.pbStack3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbStack3.TabIndex = 6;
+            this.pbStack3.TabStop = false;
+            // 
+            // pbStack4
+            // 
+            this.pbStack4.Location = new System.Drawing.Point(755, 231);
+            this.pbStack4.Name = "pbStack4";
+            this.pbStack4.Size = new System.Drawing.Size(46, 41);
+            this.pbStack4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbStack4.TabIndex = 6;
+            this.pbStack4.TabStop = false;
+            // 
+            // pbStack5
+            // 
+            this.pbStack5.Location = new System.Drawing.Point(755, 289);
+            this.pbStack5.Name = "pbStack5";
+            this.pbStack5.Size = new System.Drawing.Size(46, 41);
+            this.pbStack5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbStack5.TabIndex = 6;
+            this.pbStack5.TabStop = false;
+            // 
+            // pbStack6
+            // 
+            this.pbStack6.Location = new System.Drawing.Point(755, 345);
+            this.pbStack6.Name = "pbStack6";
+            this.pbStack6.Size = new System.Drawing.Size(46, 41);
+            this.pbStack6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbStack6.TabIndex = 6;
+            this.pbStack6.TabStop = false;
+            // 
+            // btnStack
+            // 
+            this.btnStack.Location = new System.Drawing.Point(739, 392);
+            this.btnStack.Name = "btnStack";
+            this.btnStack.Size = new System.Drawing.Size(80, 38);
+            this.btnStack.TabIndex = 7;
+            this.btnStack.Text = "Сделать";
+            this.btnStack.UseVisualStyleBackColor = true;
+            this.btnStack.Click += new System.EventHandler(this.btnAction_Click);
+            // 
+            // STACK
+            // 
+            this.STACK.AutoSize = true;
+            this.STACK.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.STACK.Location = new System.Drawing.Point(750, 28);
+            this.STACK.Name = "STACK";
+            this.STACK.Size = new System.Drawing.Size(59, 25);
+            this.STACK.TabIndex = 8;
+            this.STACK.Text = "Стэк";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 450);
+            this.ClientSize = new System.Drawing.Size(842, 450);
+            this.Controls.Add(this.STACK);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnStack);
             this.Controls.Add(this.btnAction);
             this.Controls.Add(this.pbQ6);
             this.Controls.Add(this.pbQ5);
             this.Controls.Add(this.pbQ4);
             this.Controls.Add(this.pbQ3);
             this.Controls.Add(this.pbQ2);
+            this.Controls.Add(this.pbStack6);
+            this.Controls.Add(this.pbStack5);
+            this.Controls.Add(this.pbStack4);
+            this.Controls.Add(this.pbStack3);
+            this.Controls.Add(this.pbStack2);
+            this.Controls.Add(this.pbStack1);
             this.Controls.Add(this.pbQ1);
             this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.lblXpMax);
@@ -416,6 +512,12 @@ namespace tomagochi
             ((System.ComponentModel.ISupportInitialize)(this.pbQ4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQ5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQ6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStack1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStack2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStack3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStack4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStack5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStack6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,6 +556,14 @@ namespace tomagochi
         private System.Windows.Forms.Button btnAction;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer QTimer;
+        private System.Windows.Forms.PictureBox pbStack1;
+        private System.Windows.Forms.PictureBox pbStack2;
+        private System.Windows.Forms.PictureBox pbStack3;
+        private System.Windows.Forms.PictureBox pbStack4;
+        private System.Windows.Forms.PictureBox pbStack5;
+        private System.Windows.Forms.PictureBox pbStack6;
+        private System.Windows.Forms.Button btnStack;
+        private System.Windows.Forms.Label STACK;
     }
 }
 

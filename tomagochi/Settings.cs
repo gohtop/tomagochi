@@ -30,6 +30,8 @@ namespace tomagochi
         public static MyQ q;
         public static int QSpeed;
 
+        public static MyStack stack;
+
 
         public Settings()
         {
@@ -47,6 +49,9 @@ namespace tomagochi
 
             q = new MyQ(6);
             QSpeed = 16;
+
+            stack = new MyStack(6);
+            
         }
     }
 }

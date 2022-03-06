@@ -13,6 +13,7 @@ namespace tomagochi
     partial class Form1 : Form
     {
         PictureBox[] q;
+        PictureBox[] stack;
 
         public Form1()
         {
@@ -27,6 +28,16 @@ namespace tomagochi
                 pbQ4,
                 pbQ5, 
                 pbQ6
+            };
+
+            stack = new PictureBox[]
+            {
+                pbStack1,
+                pbStack2,
+                pbStack3,
+                pbStack4,
+                pbStack5,
+                pbStack6
             };
 
             GameTimer.Interval = 1000 / Settings.speed;
@@ -123,7 +134,19 @@ namespace tomagochi
         private void btnEat_Click(object sender, EventArgs e)
         {
             //Eating();
-            Settings.q.EnQ(new KeyValuePair<Actions, Image>(Actions.Eat, Properties.Resources.Eat));
+            var pair = new KeyValuePair<Actions, Image>(Actions.Eat, Properties.Resources.Eat);
+            
+
+            Random random = new Random();
+            int coin = random.Next(0, 2);
+            if (coin == 0)
+            {
+                Settings.q.EnQ(pair);
+            }
+            else
+            {
+                Settings.stack.Push(pair);
+            }
         }
 
         private void Eating()
@@ -215,12 +238,33 @@ namespace tomagochi
 
             }
         }
-
+        private void show_stack()
+        {
+            var elements = Settings.stack.Elements;
+            for (int i = 0; i < elements.Length; i++)
+            {
+                if (elements[i] != null)
+                {
+                    var element = elements[i];
+                    var checked_element = (KeyValuePair<Actions, Image>)element;
+                    stack[i].Image = checked_element.Value;
+                }
+                else
+                {
+                    stack[i].Image = null;
+                }
+            }
+        }
 
 
         private void QTimer_Tick(object sender, EventArgs e)
         {
-           var elements = Settings.q.Elements;
+            show_q();
+        }
+
+        private void show_q()
+        {
+            var elements = Settings.q.Elements;
             for (int i = 0; i < elements.Length; i++)
             {
                 if (elements[i] != null)
