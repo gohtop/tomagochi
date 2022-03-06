@@ -27,6 +27,10 @@ namespace tomagochi
         public static int speed;
         public static int default_sub;
 
+        public static MyQ q;
+        public static int QSpeed;
+
+
         public Settings()
         {
             eat = new Scale(100);
@@ -40,6 +44,9 @@ namespace tomagochi
             is_gameover = false;
             speed = 3;
             default_sub = 50;
+
+            q = new MyQ(6);
+            QSpeed = 16;
         }
     }
 }

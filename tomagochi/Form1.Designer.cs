@@ -61,6 +61,7 @@ namespace tomagochi
             this.pbQ6 = new System.Windows.Forms.PictureBox();
             this.btnAction = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.QTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSleep)).BeginInit();
@@ -293,6 +294,7 @@ namespace tomagochi
             this.pbQ1.Location = new System.Drawing.Point(657, 56);
             this.pbQ1.Name = "pbQ1";
             this.pbQ1.Size = new System.Drawing.Size(46, 41);
+            this.pbQ1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQ1.TabIndex = 6;
             this.pbQ1.TabStop = false;
             // 
@@ -301,6 +303,7 @@ namespace tomagochi
             this.pbQ2.Location = new System.Drawing.Point(657, 114);
             this.pbQ2.Name = "pbQ2";
             this.pbQ2.Size = new System.Drawing.Size(46, 41);
+            this.pbQ2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQ2.TabIndex = 6;
             this.pbQ2.TabStop = false;
             // 
@@ -309,6 +312,7 @@ namespace tomagochi
             this.pbQ3.Location = new System.Drawing.Point(657, 172);
             this.pbQ3.Name = "pbQ3";
             this.pbQ3.Size = new System.Drawing.Size(46, 41);
+            this.pbQ3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQ3.TabIndex = 6;
             this.pbQ3.TabStop = false;
             // 
@@ -317,6 +321,7 @@ namespace tomagochi
             this.pbQ4.Location = new System.Drawing.Point(657, 231);
             this.pbQ4.Name = "pbQ4";
             this.pbQ4.Size = new System.Drawing.Size(46, 41);
+            this.pbQ4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQ4.TabIndex = 6;
             this.pbQ4.TabStop = false;
             // 
@@ -325,6 +330,7 @@ namespace tomagochi
             this.pbQ5.Location = new System.Drawing.Point(657, 289);
             this.pbQ5.Name = "pbQ5";
             this.pbQ5.Size = new System.Drawing.Size(46, 41);
+            this.pbQ5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQ5.TabIndex = 6;
             this.pbQ5.TabStop = false;
             // 
@@ -333,6 +339,7 @@ namespace tomagochi
             this.pbQ6.Location = new System.Drawing.Point(657, 345);
             this.pbQ6.Name = "pbQ6";
             this.pbQ6.Size = new System.Drawing.Size(46, 41);
+            this.pbQ6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQ6.TabIndex = 6;
             this.pbQ6.TabStop = false;
             // 
@@ -344,6 +351,7 @@ namespace tomagochi
             this.btnAction.TabIndex = 7;
             this.btnAction.Text = "Сделать";
             this.btnAction.UseVisualStyleBackColor = true;
+            this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
             // 
             // label1
             // 
@@ -354,6 +362,10 @@ namespace tomagochi
             this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Очередь";
+            // 
+            // QTimer
+            // 
+            this.QTimer.Tick += new System.EventHandler(this.QTimer_Tick);
             // 
             // Form1
             // 
@@ -441,6 +453,7 @@ namespace tomagochi
         private System.Windows.Forms.PictureBox pbQ6;
         private System.Windows.Forms.Button btnAction;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer QTimer;
     }
 }
 
